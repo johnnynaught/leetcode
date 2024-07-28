@@ -14,6 +14,7 @@ class Solution {
             if(map.containsKey(c)){
                 return new int[]{i, map.get(c)};
             }
+            
             map.put(nums[i],i);
         }
         return null;
