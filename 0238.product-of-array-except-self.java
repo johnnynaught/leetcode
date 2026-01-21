@@ -21,11 +21,10 @@ class Solution {
       for(int i = n-1; i > 0; i--){
         R[i-1] = R[i] * nums[i];
       }
-
       for(int i = 0; i < n; i++){
         res[i] = L[i] * R[i];
       }
-
+      
       return res;
     }
 }

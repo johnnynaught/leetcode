@@ -13,16 +13,14 @@ class Solution {
         map.put(']', '[');
 
         Deque<Character> stack = new ArrayDeque<>();
-        for(int i = 0; i < s.length(); i++){
-            Character c = s.charAt(i);
-            if(map.containsKey(c)){
-                Character top = stack.isEmpty()? '!' : stack.pop();
-                if(top != map.get(c)){
-                    return false;
-                }
-            }else{
-                stack.push(c);           
-            }
+        for(char c : s.toCharArray()){
+          if(map.containsKey(c)){
+              if(stack.isEmpty() || stack.pop() != map.get(c)){
+                  return false;
+              }
+          } else {
+              stack.push(c);
+          }
         }
         return stack.isEmpty();
     }

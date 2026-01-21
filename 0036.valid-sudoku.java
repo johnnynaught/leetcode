@@ -31,6 +31,7 @@ class Solution {
             boxes.get(i/3*3 + j/3).add(c);
           }
         }
+        
         return true;
     }
 }

@@ -24,7 +24,6 @@ class Solution {
                     cur++;
                 }
             }
-
             longest = Math.max(longest, len);
         }
         return longest;
